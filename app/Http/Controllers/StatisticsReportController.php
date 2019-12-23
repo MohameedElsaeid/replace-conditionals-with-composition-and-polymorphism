@@ -29,16 +29,59 @@ class StatisticsReportController extends Controller
     {
         switch ($format) {
             case 'csv':
-                $lines = [];
-                foreach ($this->data as $row) {
-                    $lines = implode(',', $row);
-                }
-                return implode("\n", $lines);
+                return $this->getCSV();
             case 'array':
-                return $this->data;
+                return $this->getArray();
             case 'html':
                 // format as HTML ...
-                return 'html';
+                return $this->getHTML();
+            case 'aif':
+                return $this->getAIF();
+            case 'cda':
+                return $this->getCDA();
+            case 'mp3':
+                return $this->getMP3();
         }
+
+        return $this->default();
+    }
+
+    private function getCSV(): string
+    {
+        return 'CSV';
+    }
+
+    private function getArray(): string
+    {
+        $lines = [];
+        foreach ($this->data as $row) {
+            $lines = implode(',', $row);
+        }
+        return implode("\n", $lines);
+    }
+
+    private function getHTML(): string
+    {
+        return 'HTML';
+    }
+
+    private function default(): string
+    {
+        return 'default';
+    }
+
+    private function getMP3(): string
+    {
+        return 'MP3';
+    }
+
+    private function getCDA(): string
+    {
+        return 'CDA';
+    }
+
+    private function getAIF(): string
+    {
+        return 'AIF';
     }
 }
