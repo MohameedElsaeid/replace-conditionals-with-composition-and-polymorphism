@@ -4,10 +4,9 @@
 namespace App\Statistics;
 
 
-use App\Statistics\Interfaces\StatisticsInterface;
 use stdClass;
 
-abstract class StatisticsReport implements StatisticsInterface
+abstract class StatisticsReport
 {
     protected array $data;
 
