@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\ReplaceConditionalsWithPolymorphismExample;
+namespace App\example;
+
 
 /**
  * Class Triangle
- * @package App\Http\Controllers\ReplaceConditionalsWithPolymorphismExample
+ * @package App\Http\Controllers\example
  */
 class Triangle extends Shape
 {

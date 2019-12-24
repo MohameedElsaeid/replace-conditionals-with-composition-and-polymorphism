@@ -1,12 +1,11 @@
 <?php
 
-
-namespace App\Http\Controllers\ReplaceConditionalsWithPolymorphismExample;
+namespace App\example;
 
 
 /**
  * Class Square
- * @package App\Http\Controllers\ReplaceConditionalsWithPolymorphismExample
+ * @package App\Http\Controllers\example
  */
 class Square extends Shape
 {

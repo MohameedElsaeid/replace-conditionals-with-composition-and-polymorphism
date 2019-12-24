@@ -1,7 +1,7 @@
 <?php
 
-
-use App\Http\Controllers\ReplaceConditionalsWithPolymorphismExample\{Square,Triangle};
+use App\example\Square;
+use App\example\Triangle;
 
 $square = new Square(4);
 echo $square->getArea(); // 4
